@@ -67,18 +67,18 @@ public class Average
 		
 		try
 		{
-	        JAXBContext context = JAXBContext.newInstance(ExchangeRatesSeries.class);
-	        Unmarshaller unmarshaller = context.createUnmarshaller();
-	        StringReader reader = new StringReader(XMLData);
-	        ExchangeRatesSeries example = (ExchangeRatesSeries) unmarshaller.unmarshal(reader);
+			JAXBContext context = JAXBContext.newInstance(ExchangeRatesSeries.class);
+			Unmarshaller unmarshaller = context.createUnmarshaller();
+			StringReader reader = new StringReader(XMLData);
+			ExchangeRatesSeries example = (ExchangeRatesSeries) unmarshaller.unmarshal(reader);
 	        
-	        double sum = example.getAvgSum();
-		    return String.valueOf(sum);
+			double sum = example.getAvgSum();
+			return String.valueOf(sum);
 		}
 		catch (JAXBException e)
 		{
-	        e.printStackTrace();
-	    }
+			e.printStackTrace();
+		}
 		
 		return "0";      	        
 	}

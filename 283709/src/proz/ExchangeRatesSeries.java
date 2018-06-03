@@ -71,7 +71,6 @@ public class ExchangeRatesSeries
 
 	public void setCode(String code)
 	{
-		
 		Code = code;
 	}
 }
